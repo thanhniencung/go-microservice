@@ -1,0 +1,33 @@
+version: '2'
+services:
+  proxy:
+    image: jwilder/nginx-proxy
+    container_name: employee-nginx-proxy
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    ports:
+      - "80:80"
+
+  employee:
+    build: ./employee
+    image: employee/profile
+    container_name: employee-profile
+    depends_on:
+      - mysql
+      - proxy
+    links:
+      - mysql
+
+ mysql:
+  image: mysql:5.7
+  container_name: mysql
+  volumes:
+    - dbdata:/var/lib/mysql
+  restart: always
+  environment:
+    - MYSQL_ROOT_PASSWORD=likeyou1234
+    - MYSQL_DATABASE=hr-management
+    - MYSQL_USER=root
+    - MYSQL_PASSWORD=likeyou1234
+  ports:
+    - "33061:3306"

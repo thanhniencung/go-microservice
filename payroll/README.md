@@ -1,0 +1,2 @@
+- Hiển thị số tiền cần trả cho tất cả các nhân viên trong 1 chi nhánh 
+- Hiển thị số tiền cần trả cho 1 nhân viên chỉ định 

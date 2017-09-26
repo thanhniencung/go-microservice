@@ -1,0 +1,4 @@
+- Tạo mới một nhân viên 
+- Chỉnh sửa thông tin nhân viên 
+- Xoá thông tin nhân viên 
+- Lấy tất cả thông tin có trong database 
