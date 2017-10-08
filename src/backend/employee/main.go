@@ -1,16 +1,17 @@
 package main
 
 import (
-	common "backend/employee/common"
+	database "backend/employee/database"
+	/*common "backend/employee/common"
 	router "backend/employee/router"
 	"log"
-	"net/http"
+	"net/http"*/
 )
 
 func main() {
-	common.InitConfig()
+	database.Init()
+	/*common.InitConfig()
 
-	// Get the mux router object
 	router := router.InitRoutes()
 
 	server := &http.Server {
@@ -19,5 +20,5 @@ func main() {
 	}
 
 	log.Println("Listening...")
-	server.ListenAndServe()
+	server.ListenAndServe()*/
 }

@@ -26,7 +26,7 @@ func AddNewEmployee(w http.ResponseWriter, r *http.Request) {
 	teamId := r.PostFormValue("teamId")
 	avatar := r.PostFormValue("avatar")
 
-	employee := Employee{
+	employee := Employee {
 		FirstName: firstName,
 		LastName:  lastName,
 		JoinDate:  time.Now(),

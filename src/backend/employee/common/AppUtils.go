@@ -1,12 +1,12 @@
 package common
 
 import (
-	"database/sql"
+	
 	"encoding/json"
 	"log"
 	"net/http"
 	"os"
-
+"database/sql"
 	_ "github.com/go-sql-driver/mysql"
 )
 
